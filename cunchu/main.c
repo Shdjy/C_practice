@@ -55,16 +55,15 @@
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
-    int a = 0;
-    char*p = (char*)&a;
-    if(*p ==1)
+    short val = 0x0001;
+    char *p = (char *)&val;
+    if (*p == 0x00)
     {
-        printf("小端\n");
+        printf("大端存储\n");
     }
     else
     {
-        printf("大端\n");
+        printf("小端存储\n");
     }
-
     return 0;
 }
